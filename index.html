@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultoria Online - TEAM SAM</title>
+  
+  <!-- Ficheiro de Estilos CSS External -->
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="logo-container">
+      <img src="IMG_1708.PNG" alt="TEAM SAM Mascot" class="logo-img">
+      <span class="logo-text">TEAM <span>SAM</span></span>
+    </div>
+
+    <!-- Navegação com APENAS os 3 botões solicitados -->
+    <nav class="nav-links">
+      <a href="#pqvirar" class="btn btn-outline">Virar Aluno</a>
+      <a href="#metodologia" class="btn btn-outline">Conhecer Métodos</a>
+      <button class="btn btn-gold" id="openAnamnese">Fazer Anamnese</button>
+    </nav>
+  </header>
+
+  <!-- SEÇÃO HERO (INÍCIO) -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="IMG_1708.PNG" alt="Logo Team Sam Urso" class="mascot-hero">
+      <div class="hero-text">
+        <span class="tagline">CONSULTORIA ONLINE</span>
+        <h1>DESPERTE O SEU <span>MODO FERA</span></h1>
+        <p>Acompanhamento de treino e alta performance focado em resultados reais e transformação física.</p>
+        <div class="hero-buttons">
+          <button class="btn btn-gold" id="open">COMEÇAR AGORA</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PÁGINA PRINCIPAL: QUEM É O PERSONAL E METODOLOGIA -->
+  <main class="main-container">
+
+    <!-- SEÇÃO: QUEM É O PERSONAL -->
+    <section class="card-section">
+      <h2 class="section-title">QUEM É O PERSONAL</h2>
+      <div class="personal-info">
+        <p>
+          <img src="IMG_1708.PNG" class="foto"> <br>
+          Bem-vindo ao <strong>TEAM SAM</strong>! Sou o Treinador Samuel, especialista em musculação, hipertrofia e emagrecimento de alta performance. O meu objetivo é transformar o seu corpo e a sua mentalidade através de um acompanhamento 100% individualizado.
+        </p>
+        <p>
+          Com anos de experiência e dezenas de alunos transformados, desenvolvi uma metodologia estratégica para quem procura resultados rápidos, seguros e sustentáveis, independentemente do seu nível atual.
+        </p>
+      </div>
+    </section>
+    <!--card do porque virar aluno-->
+    <section id=pqvirar class="card-section">
+      <h2 class="section-title">Por que virar aluno?</h2>
+      <div class="personal-info">
+        <p>
+          <strong>TEAM SAM</strong> é o caminho ideal para quem procura evolução real, constância e resultados de verdade. Mais do que apenas um plano de treino ou acompanhamento, fazer parte do Team Sam significa ter ao teu lado um direcionamento estratégico, suporte próximo e uma metodologia pensada para extrair o seu potencial maximo     
+        </p>
+        <button class="btn btn-gold" id="openi">Virar aluno Agora</button>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: COMO FUNCIONA A SUA METODOLOGIA -->
+    <section id="metodologia" class="card-section">
+      <h2 class="section-title">COMO FUNCIONA A METODOLOGIA</h2>
+      
+      <div class="metodologia-grid">
+        <div class="metodo-card">
+          <div class="card-number">01</div>
+          <h3>Anamnese Completa</h3>
+          <p>Análise detalhada do seu histórico, rotina, restrições corporais, lesões e objetivos específicos.</p>
+        </div>
+
+        <div class="metodo-card">
+          <div class="card-number">02</div>
+          <h3>Treino Personalizado</h3>
+          <p>Ficha de treino desenhada à sua medida para o seu nível (iniciante, intermédio ou avançado).</p>
+        </div>
+
+        <div class="metodo-card">
+          <div class="card-number">03</div>
+          <h3>Ajuste Técnico</h3>
+          <p>Feedback contínuo sobre a execução dos exercícios para maximizar os resultados e evitar lesões.</p>
+        </div>
+
+        <div class="metodo-card">
+          <div class="card-number">04</div>
+          <h3>Acompanhamento Ativo</h3>
+          <p>Suporte direto para tirar dúvidas, ajustar cargas e garantir a sua evolução constante.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL: FORMULÁRIO DE ANAMNESE -->
+  <div class="modal-overlay" id="anamneseModal">
+    <div class="modal">
+      <button class="modal-close" id="closeAnamnese">&times;</button>
+      <h2 class="section-title" style="margin-bottom: 20px;">Cadastro</h2>
+      
+      <form id="anamneseForm">
+        <div class="form-group">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" required placeholder="O seu nome">
+        </div>
+        <div class="form-group">
+          <label for="nome">Numero</label>
+          <input id="numew"
+            type="text" 
+            inputmode="numeric" 
+            maxlength="15" 
+            oninput=mascaraTelefone(this)
+            placeholder="Ex:67999999999"
+            >
+        </div>
+        <div class="form-group">
+          <label for="nome">email</label>
+          <input type="text" id="email" required placeholder="exemp@gmail.com">
+        </div>
+        <button type="submit" class="btn btn-gold btn-large" style="width: 100%; border: none; cursor: pointer;">Fazer Anamnese</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2026 TEAM SAM - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Ficheiro de Script JS External -->
+  <script src="script/script.js"></script>
+</body>
+</html>

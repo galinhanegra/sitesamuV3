@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anamnese Completa - Team Sam</title>
+  <!-- Fonte Google Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <header class="form-header">
+        <div class="logo-container">
+            <img src="/IMG_1708.PNG" alt="TEAM SAM Mascot" class="logo-img">
+            <span class="logo-text">TEAM <span>SAM</span></span>
+             <h1 class="OLAMUNDO">Formulário de Anamnese</h1>
+        </div>
+        <p>Preencha os campos abaixo para montarmos o seu protocolo personalizado.</p>
+    </header>
+
+    <main class="container">
+      <form id="formAnamneseCompleto">
+        
+        <!-- DADOS PESSOAIS & FÍSICOS -->
+        <fieldset class="form-card">
+          <legend>
+            <span class="step-number">1</span>
+            Dados Pessoais & Físicos
+          </legend>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="sexo">Sexo</label>
+              <select id="sexo" required>
+                <option value="">Selecione...</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="dataNascimento">Data de Nascimento</label>
+              <input type="date" id="dataNascimento" required>
+            </div>
+
+            <div class="form-group">
+            <label for="peso">Peso (kg)</label>
+            <input type="number" step="0.1" id="peso" min="0" placeholder="Ex: 75.5" required>
+            </div>
+
+            <div class="form-group">
+            <label for="altura">Altura (m)</label>
+            <input type="text" id="altura" placeholder="Ex: 1,72" maxlength="4" required>
+            </div>
+        </fieldset>
+
+        <!-- HISTÓRICO DE SAÚDE -->
+        <fieldset class="form-card">
+          <legend>
+            <span class="step-number">2</span>
+            Histórico de Saúde
+          </legend>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="lesoes">Histórico de Lesões</label>
+              <input type="text" id="lesoes" placeholder="Descreva ou coloque 'Nenhum'">
+            </div>
+
+            <div class="form-group">
+              <label for="medicamentos">Uso de Medicamentos</label>
+              <input type="text" id="medicamentos" placeholder="Descreva ou coloque 'Nenhum'">
+            </div>
+
+            <div class="form-group">
+              <label for="dores">Histórico de Dores</label>
+              <input type="text" id="dores" placeholder="Descreva ou coloque 'Nenhum'">
+            </div>
+
+            <div class="form-group">
+              <label for="cirurgias">Histórico de Cirurgias</label>
+              <input type="text" id="cirurgias" placeholder="Descreva ou coloque 'Nenhum'">
+            </div>
+
+            <div class="form-group">
+              <label for="doencasCronicas">Doenças Crônicas</label>
+              <input type="text" id="doencasCronicas" placeholder="Descreva ou coloque 'Nenhum'">
+            </div>
+
+            <div class="form-group">
+              <label for="doencasFamilia">Doenças na Família</label>
+              <input type="text" id="doencasFamilia" placeholder="Descreva ou coloque 'Nenhum'">
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ALIMENTAÇÃO -->
+        <fieldset class="form-card">
+          <legend>
+            <span class="step-number">3</span>
+            Alimentação
+          </legend>
+
+          <div class="form-group">
+            <label for="nutricionista">Sua alimentação tem o acompanhamento de um nutricionista?</label>
+            <select id="nutricionista" required>
+              <option value="Sim">Sim</option>
+              <option value="Não">Não</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="rotinaAlimentar">Descreva brevemente a sua rotina alimentar</label>
+            <textarea id="rotinaAlimentar" rows="3" placeholder="Ex: Refeições diárias, horários, hábitos..."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- PRÁTICA DE EXERCÍCIO FÍSICO -->
+        <fieldset class="form-card">
+          <legend>
+            <span class="step-number">4</span>
+            Prática de Exercício Físico
+          </legend>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="praticaExercicio">Você já pratica exercício físico?</label>
+              <select id="praticaExercicio" required>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="tiposEQuantidade">Tipos de exercício e frequência</label>
+              <input type="text" id="tiposEQuantidade" placeholder="Ex: Musculação 3x por semana">
+            </div>
+
+            <div class="form-group">
+              <label for="experienciaExercicio">Experiência com exercício</label>
+              <input type="text" id="experienciaExercicio" placeholder="Iniciante, intermediário, avançado...">
+            </div>
+
+            <div class="form-group">
+              <label for="prazerPraticar">Exercícios que tem mais prazer em praticar</label>
+              <input type="text" id="prazerPraticar" placeholder="Ex: Musculação, corrida, lutas...">
+            </div>
+
+            <div class="form-group">
+              <label for="tentativasConsistencia">Quantas vezes tentou ter consistência e não conseguiu?</label>
+              <input type="text" id="tentativasConsistencia" placeholder="Ex: Várias vezes, Nenhuma...">
+            </div>
+
+            <div class="form-group">
+              <label for="tempoMaximoAderiu">Tempo máximo que aderiu a um treino</label>
+              <input type="text" id="tempoMaximoAderiu" placeholder="Ex: 6 meses, 1 ano...">
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- PREFERÊNCIAS DE TREINO -->
+        <fieldset class="form-card">
+          <legend>
+            <span class="step-number">5</span>
+            Preferências de Treino
+          </legend>
+
+          <div class="form-group custom-radio-group">
+            <label class="group-title">Qual tipo de treino te dá mais vontade de praticar?</label>
+            <label class="radio-option">
+              <input type="radio" name="tipoTreinoVontade" value="Treinos curtos (30min) e intensos (sair suado e cansado)" required>
+              <span class="radio-custom"></span>
+              <span>Treinos curtos (30min) e intensos (sair suado e cansado)</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="tipoTreinoVontade" value="Treinos mais longos (60min) e com mais ênfase específica (músculo mais inchado)">
+              <span class="radio-custom"></span>
+              <span>Treinos mais longos (60min) e com mais ênfase específica</span>
+            </label>
+          </div>
+
+          <div class="form-group custom-radio-group">
+            <label class="group-title">Sobre o tipo de treino, a seguinte frase te define melhor:</label>
+            <label class="radio-option">
+              <input type="radio" name="fraseTreino" value="Gosto muito de musculação mas não gosto de treino aeróbio" required>
+              <span class="radio-custom"></span>
+              <span>Gosto muito de musculação, mas não gosto de treino aeróbio.</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="fraseTreino" value="Gosto muito de musculação e de aeróbio (sem preferência por um dos dois)">
+              <span class="radio-custom"></span>
+              <span>Gosto muito de musculação e de aeróbio (sem preferência).</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="fraseTreino" value="Gosto muito de aeróbio mas não gosto de musculação">
+              <span class="radio-custom"></span>
+              <span>Gosto muito de aeróbio, mas não gosto de musculação.</span>
+            </label>
+          </div>
+
+          <div class="form-group custom-radio-group">
+            <label class="group-title">Para você, treinar é:</label>
+            <label class="radio-option">
+              <input type="radio" name="sentimentoTreinar" value="Extremamente prazeroso, não vejo a hora de treinar" required>
+              <span class="radio-custom"></span>
+              <span>Extremamente prazeroso, não vejo a hora de treinar.</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="sentimentoTreinar" value="Só sinto prazer na hora que já estou treinando">
+              <span class="radio-custom"></span>
+              <span>Só sinto prazer na hora em que já estou a treinar.</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="sentimentoTreinar" value="Não é ruim, mas também não é uma das minhas atividades favoritas">
+              <span class="radio-custom"></span>
+              <span>Não é mau, mas não é uma das minhas atividades favoritas.</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="sentimentoTreinar" value="Odeio treinar, só faço isso porque preciso e quero muito mudar o corpo">
+              <span class="radio-custom"></span>
+              <span>Odeio treinar, só o faço porque preciso e quero mudar o corpo.</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- OBJETIVOS -->
+        <fieldset class="form-card">
+          <legend>
+            <span class="step-number">6</span>
+            Objetivos
+          </legend>
+
+          <div class="form-group">
+            <label for="objetivoPratica">Qual é o seu objetivo com a prática de exercício físico?</label>
+            <textarea id="objetivoPratica" rows="2" required placeholder="Ex: Perder peso, ganhar massa muscular, ter mais saúde..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="expectativaCorpo">O que você quer que aconteça com o seu corpo?</label>
+            <textarea id="expectativaCorpo" rows="2" required placeholder="Descreva os resultados visuais que espera alcançar..."></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn-submit">
+          ENVIAR ANAMNESE VIA WHATSAPP
+        </button>
+
+      </form>
+    </main>
+  </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("formAnamneseCompleto");
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // 1. Recupera os dados guardados no localStorage
+        const dadosCadastro = JSON.parse(localStorage.getItem("dadosCadastro")) || {};
+
+        // 2. Captura as opções selecionadas nos botões de rádio
+        const tipoTreinoVontade = document.querySelector('input[name="tipoTreinoVontade"]:checked')?.value || "Não informado";
+        const fraseTreino = document.querySelector('input[name="fraseTreino"]:checked')?.value || "Não informado";
+        const sentimentoTreinar = document.querySelector('input[name="sentimentoTreinar"]:checked')?.value || "Não informado";
+
+        // 3. Monta o texto puro usando quebras de linha (\n)
+        const textoMensagem = 
+`📋 *FORMULÁRIO DE ANAMNESE COMPLETA*
+
+*--- DADOS DE CADASTRO ---*
+*Nome:* ${dadosCadastro.nome || 'Não informado'}
+*Contato:* ${dadosCadastro.numero || 'Não informado'}
+*E-mail:* ${dadosCadastro.email || 'Não informado'}
+
+*--- DADOS PESSOAIS & FÍSICOS ---*
+*Sexo:* ${document.getElementById("sexo").value}
+*Data Nasc.:* ${document.getElementById("dataNascimento").value}
+*Peso:* ${document.getElementById("peso").value} kg
+*Altura:* ${document.getElementById("altura").value} m
+
+*--- HISTÓRICO DE SAÚDE ---*
+*Lesões:* ${document.getElementById("lesoes").value || 'Nenhum'}
+*Medicamentos:* ${document.getElementById("medicamentos").value || 'Nenhum'}
+*Dores:* ${document.getElementById("dores").value || 'Nenhum'}
+*Cirurgias:* ${document.getElementById("cirurgias").value || 'Nenhum'}
+*Doenças Crônicas:* ${document.getElementById("doencasCronicas").value || 'Nenhum'}
+*Doenças Família:* ${document.getElementById("doencasFamilia").value || 'Nenhum'}
+
+*--- ALIMENTAÇÃO ---*
+*Nutricionista:* ${document.getElementById("nutricionista").value}
+*Rotina Alimentar:* ${document.getElementById("rotinaAlimentar").value || 'Não informado'}
+
+*--- PRÁTICA DE EXERCÍCIO ---*
+*Pratica Exercício:* ${document.getElementById("praticaExercicio").value}
+*Tipos/Qtd:* ${document.getElementById("tiposEQuantidade").value || 'Não informado'}
+*Experiência:* ${document.getElementById("experienciaExercicio").value || 'Não informado'}
+*Exercício c/ Prazer:* ${document.getElementById("prazerPraticar").value || 'Não informado'}
+*Tentativas Consistência:* ${document.getElementById("tentativasConsistencia").value || 'Não informado'}
+*Tempo Máx. Aderiu:* ${document.getElementById("tempoMaximoAderiu").value || 'Não informado'}
+
+*--- PREFERÊNCIAS DE TREINO ---*
+*Vontade de Treinar:* ${tipoTreinoVontade}
+*Perfil de Treino:* ${fraseTreino}
+*Sentimento sobre Treinar:* ${sentimentoTreinar}
+
+*--- OBJETIVOS ---*
+*Objetivo:* ${document.getElementById("objetivoPratica").value}
+*Expectativa p/ o Corpo:* ${document.getElementById("expectativaCorpo").value}`;
+
+        // 4. Número configurado
+        const numeroWhatsapp = "556799231983"; 
+
+        // 5. Codifica todo o bloco de texto para URL e redireciona
+        const urlWhatsapp = `https://api.whatsapp.com/send?phone=${numeroWhatsapp}&text=${encodeURIComponent(textoMensagem)}`;
+
+        window.open(urlWhatsapp, '_blank');
+        localStorage.removeItem("dadosCadastro");
+      });
+    }
+  });
+</script>
+<script src="script/script.js"></script>
+</body>
+</html>
